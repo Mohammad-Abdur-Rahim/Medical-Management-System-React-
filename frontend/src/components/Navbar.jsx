@@ -1,9 +1,14 @@
 import React from 'react'
 import logo from "../assets/assets_frontend/logo.svg";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
+
+
     return (
         <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-300'>
             <img className='w-44 cursor-pointer' src={logo} alt="" />
@@ -26,7 +31,7 @@ const Navbar = () => {
                 </NavLink>
             </ul>
             <div className='flex items-center gap-4'>
-                <button className='bg-[#5f6FFF] text-white px-8 py-3 rounded-full font-light hidden md:block'>Create Account</button>
+                <button onClick={()=>navigate('/login')} className='bg-[#5f6FFF] text-white px-8 py-3 rounded-full font-light hidden md:block cursor-pointer'>Create Account</button>
             </div>
         </div>
     );
