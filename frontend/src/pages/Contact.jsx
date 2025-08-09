@@ -5,27 +5,27 @@ const Contact = () => {
   return (
     <div>
       <div>
-        <p className="text-gray-900 text-center text-4xl mb-5">
-          Contact <span className="font-bold text-black">US</span>
+        <p className="text-gray-500 text-center text-2xl pt-10">
+          Contact <span className="font-semibold text-gray-700">US</span>
         </p>
       </div>
-      <div className="flex justify-center items-center gap-15 ">
-        <div>
-          <img src={contact} alt="" />
-        </div>
-        <div>
-          <h4>Our OFFICE</h4> <br />
-          <p>
+
+
+      <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28 text-sm ">
+          <img className="w-full md:max-w-[360px]" src={contact} alt="" />
+        <div className="flex flex-col justify-center items-start gap-6">
+          <p className=" font-semibold text-lg text-gray-600">Our OFFICE</p>
+          <p className="text-gray-500">
             54709 Willms Station Suite 350,
             <br /> Washington, USA
-          </p> <br />
-          <p>
+          </p> 
+          <p className="text-gray-500">
             Tel: (415) 555‑0132 <br />
             Email: greatstackdev@gmail.com
-          </p> <br />
-          <h4>Careers at PRESCRIPTO</h4>
-          <p>Learn more about our teams and job openings.</p> <br /> <br />
-          <button className="bg-[#5f6FFF] text-white px-8 py-3 rounded-full font-light hidden md:block cursor-pointer">
+          </p>
+          <p className="text-gray-600 font-semibold text-lg">Careers at PRESCRIPTO</p>
+          <p className="text-gray-500">Learn more about our teams and job openings.</p> 
+          <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500 cursor-pointer">
             Explore Jobs
           </button>
         </div>
