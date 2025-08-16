@@ -3,9 +3,7 @@
 .active hr{
     @apply block
 }
-::-webkit-scrollbar{
-    @apply hidden;
-}
+
 *{
     font-family: Outfit;
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 
 const TopDoctor = () => {
-  const naviage = useNavigate();
+  const navigate = useNavigate();
   // Step --2 Use UseContext ----------------------------------------------------------------
   const { doctors } = useContext(AppContext);
   return (
@@ -17,7 +17,7 @@ const TopDoctor = () => {
       <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 pt-5 gap-y-6 sm:px-0">
         {doctors.slice(0, 10).map((data, idx) => (
           <div
-            onClick={() => naviage(`/appointment/${data._id}`)}
+            onClick={() => navigate(`/appointment/${data._id}`)}
             className="border  border-blue-200 rounded-b-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
             key={idx}
           >
@@ -35,7 +35,7 @@ const TopDoctor = () => {
       </div>
       <button
         onClick={() => {
-          naviage("/doctors");
+          navigate("/doctors");
           scrollTo(0, 0);
         }}
      

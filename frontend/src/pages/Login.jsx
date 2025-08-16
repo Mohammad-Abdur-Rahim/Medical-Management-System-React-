@@ -19,7 +19,7 @@ const Login = () => {
             {state === "Sign Up" ? "Create Account" : "Login"}
           </p>
           <p>
-            Plesae {state === "Sign Up" ? "sing Up" : "log in"} to Book
+            Plesae {state === "Sign Up" ? "Sing Up" : "log in"} to Book
             Appointment
           </p>
           {
