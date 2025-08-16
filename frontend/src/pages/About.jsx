@@ -27,7 +27,7 @@ const About = () => {
             ongoing care, Prescripto is here to support you every step of the
             way.
           </p>
-          <b className="text-gray-800">Our Vision</b>
+          <b className="text-gray-800 text-xl">Our Vision</b>
   
           <p>
             Our vision at Prescripto is to create a seamless healthcare
@@ -41,11 +41,11 @@ const About = () => {
         WHY <span className="text-gray-700 font-semibold">CHOOSE US</span>
       </div>
       <div className="flex flex-col md:flex-row mb-20">
-        <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
+        <div className="border lg:border-r-0 px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
           <b>Efficiency:</b>
           <p>Streamlined appointment scheduling that fits into your busy lifestyle.</p>
         </div>
-        <div className="border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
+        <div className="border lg:border-r-0 px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#5f6FFF] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer">
           <b>Convenience</b>
           <p>Access to a network of trusted healthcare professionals in your area.</p>
         </div>
