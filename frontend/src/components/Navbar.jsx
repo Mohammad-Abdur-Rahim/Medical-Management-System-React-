@@ -10,24 +10,36 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-300">
       <img onClick={()=>navigate('/')} className="w-44 cursor-pointer" src={assets.logo} alt="" />
-      <ul className="hidden md:flex items-start gap-5 font-medium">
-        <NavLink to="/">
-          <li className="py-1">Home</li>
-          <hr className="border-none outline-none  bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
-        </NavLink>
-        <NavLink to="/doctors">
-          <li className="py-1">All Doctors</li>
-          <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
-        </NavLink>
-        <NavLink to="about">
-          <li className="py-1">About</li>
-          <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
-        </NavLink>
-        <NavLink to="contact">
-          <li className="py-1">Conatct</li>
-          <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
-        </NavLink>
-      </ul>
+    <ul className="hidden md:flex items-start gap-5 font-medium">
+  <li>
+    <NavLink to="/" className="py-1">
+      Home
+    </NavLink>
+    <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
+  </li>
+
+  <li>
+    <NavLink to="/doctors" className="py-1">
+      All Doctors
+    </NavLink>
+    <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
+  </li>
+
+  <li>
+    <NavLink to="/about" className="py-1">
+      About
+    </NavLink>
+    <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
+  </li>
+
+  <li>
+    <NavLink to="/contact" className="py-1">
+      Contact
+    </NavLink>
+    <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
+  </li>
+</ul>
+
       {/* //Login Page Menu fN */}
       <div className="flex items-center gap-4">
         {/* //Profile Section  With UseState-------------   */}
