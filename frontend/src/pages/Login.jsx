@@ -7,9 +7,28 @@ const Login = () => {
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
 
+  // const onSubmitHandler = async (e) => {
+  //   e.preventDefault();
+  // };
+
   const onSubmitHandler = async (e) => {
-    e.preventDefault();
-  };
+  e.preventDefault();
+
+  try {
+    const response = await fetch("http://localhost/register.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, pass }),
+    });
+
+    const data = await response.json();
+    console.log("Response:", data);
+    alert(data.message);
+  } catch (error) {
+    console.error("Fetch error:", error);
+    alert("Something went wrong. Check server logs.");
+  }
+};
 
   return (
     <form className="min-h-[80vh] flex items-center" onSubmit={onSubmitHandler}>
@@ -28,7 +47,7 @@ const Login = () => {
           <input
             className="border border-zinc-300 rounded w-full p-2 mt-1"
             type="text"
-            onChange={(e) => setName(e.target.name)}
+            onChange={(e) => setName(e.target.value)}
             value={name}
             required
           />
@@ -41,7 +60,7 @@ const Login = () => {
           <input
             className="border border-zinc-300 rounded w-full p-2 mt-1"
             type="email"
-            onChange={(e) => setEmail(e.target.name)}
+            onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
           />
@@ -51,7 +70,7 @@ const Login = () => {
           <input
             className="border border-zinc-300 rounded w-full p-2 mt-1"
             type="password"
-            onChange={(e) => setPass(e.target.name)}
+            onChange={(e) => setPass(e.target.value)}
             value={pass}
             required
           />

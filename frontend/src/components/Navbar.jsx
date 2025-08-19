@@ -38,6 +38,14 @@ const Navbar = () => {
     </NavLink>
     <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
   </li>
+  <li>
+  <a href="/frontend/appointment/register.html" className="py-1">
+    Register
+  </a>
+  <hr className="border-none outline-none bg-[#5f6FFF] w-3/5 m-auto h-0.5 hidden" />
+</li>
+
+   
 </ul>
 
       {/* //Login Page Menu fN */}
