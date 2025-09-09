@@ -2,10 +2,10 @@ import { AppContext } from "./AppContext";
 import { doctors } from "../assets/assets_frontend/assets";
 
 const AppContextProvider = (props) => {
-  const currencySymbol = '$'
-  const value = { 
-    doctors ,
-    currencySymbol
+  const currencySymbol = "$";
+  const value = {
+    doctors,
+    currencySymbol,
   };
 
   return (
