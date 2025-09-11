@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import my from "../assets/assets_frontend/self.png";
+import { assets } from "../assets/assets_frontend/assets";
 
 const MyProfile = () => {
   const [userData, setUserData] = useState({
     name: "Md. Abdur Rahim",
-    image: my,
+    image: assets.profile_rahim,
     email: "AbdurRahim@gmail.com",
     phone: "01560023075",
     address: {
@@ -18,7 +18,7 @@ const MyProfile = () => {
   const [isEdit, setIsEdit] = useState(false);
   return (
     <div className="max-w-lg flex flex-col gap-2 text-sm">
-      <img className="w-50 rounded" src={userData.image} alt="" />
+      <img className="w-40 rounded-full" src={userData.image} alt="" />
       {isEdit ? (
         <input
           className="bg-gray-50 text-3xl font-medium max-w-60 mt-4"
