@@ -7,14 +7,14 @@ const TopDoctor = () => {
   // Step --2 Use UseContext ----------------------------------------------------------------
   const { doctors } = useContext(AppContext);
   return (
-    <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
+    <div className="flex flex-col items-center gap-4 md:my-16 text-gray-900 md:mx-10">
       <h2 className="text-3xl font-medium text-[#1F2937]">
         Top Doctors to Book
       </h2>
       <p className="sm:1/3 text-center text-sm text-[#4B5563] ">
         Simply browse through our extensive list of trusted doctors.
       </p>
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 pt-5 gap-y-6 sm:px-0">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-5 gap-y-6 sm:px-0">
         {doctors.slice(0, 10).map((data, idx) => (
           <div
             onClick={() => navigate(`/appointment/${data._id}`)}
